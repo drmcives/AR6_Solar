@@ -32,7 +32,7 @@ ax.set_xlabel("Capacity (GW)")
 ax.set_title("PV Capacity vs Capex by Model")
 
 # Save plot
-output_path = "capacity_vs_capex_scatter2.png"
+output_path = os.getcwd() + '\\outputs\\capacity_vs_capex_scatter2.png'
 fig.savefig(output_path, bbox_inches='tight')
 
 print("Scatter plot of Capacity vs Capex by Model saved as capacity_vs_capex_scatter.png")

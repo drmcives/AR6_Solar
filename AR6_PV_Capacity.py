@@ -66,5 +66,5 @@ fig.update_layout(
 )
 
 # Save the plot as JSON and PNG
-fig.write_json('pv_capacity_shaded_by_model_group.json')
-fig.write_image('pv_capacity_shaded_by_model_group.png')
+fig.write_json(os.getcwd() + '\\outputs\\pv_capacity_shaded_by_model_group.json')
+fig.write_image(os.getcwd() + '\\outputs\\pv_capacity_shaded_by_model_group.png')

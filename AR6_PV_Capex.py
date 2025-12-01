@@ -72,7 +72,7 @@ fig.update_layout(
 #fig.write_json('pv_Capex_shaded_by_model_group.json')
 #fig.show()
 
-fig.write_image('pv_Capex_by_model_group.png')
+fig.write_image(os.getcwd() + '\\outputs\\pv_Capex_by_model_group.png')
 
 
 fig2 = go.Figure()
@@ -127,57 +127,8 @@ fig2.update_layout(
 
 # Save the plot as JSON and PNG
 #fig.write_json('pv_Capex_log_scale.json')
-fig2.write_image('pv_Capex_log_scale.png')
+fig2.write_image(os.getcwd() + '\\outputs\\pv_Capex_log_scale.png')
 
 fig2.show()
 
 
-
-# # Filter data for years between 2020 and 2100
-# df_filtered = df[(df['Year'] >= 2020) & (df['Year'] <= 2100)]
-
-# # Create the line plot using Plotly Express
-# fig = px.line(
-#     df_filtered,
-#     x='Year',
-#     y='PV_Capex',
-#     color='Model_Group',  # Color lines by Model_Group
-#     title='PV Capex from 2020 to 2100 by Model Group',
-#     labels={'Year': 'Year', 'PV_Capex': 'PV Capex (GW)', 'Model_Group': 'Model Group'}
-# )
-
-# # Save the plot as JSON and PNG
-# fig.write_json('pv_Capex_by_model_group.json')
-# #fig.write_image('pv_Capex_by_model_group.png')
-
-# print("Graph created successfully: 'pv_Capex_by_model_group.json' and 'pv_Capex_by_model_group.png'")
-
-
-# # Alternative using seaborn and matplotlib
-
-# # Load your CSV
-# df = pd.read_csv(os.getcwd() + "\\data\\PV_Capex_vs_GDP.csv")
-
-# # Set style
-# sns.set(style="whitegrid")
-
-# # Plot each Model_Group
-# plt.figure(figsize=(10,6))
-# for group, data in df.groupby("Model_Group"):
-#     # Plot line
-#     sns.lineplot(x="Year", y="PV_Capex", data=data, label=group)
-    
-#     # Shade range (min to max per year)
-#     grouped = data.groupby("Year")["PV_Capex"]
-#     plt.fill_between(group,
-#                      grouped.min(),
-#                      grouped.max(),
-#                      alpha=0.2)
-
-# plt.title("PV Capex vs GDP by Model Group")
-# plt.xlim(2020,2100)
-# plt.ylim(0,5000)
-# plt.xlabel("Year")
-# plt.ylabel("PV Capex")
-# plt.legend(title="Model Group")
-# plt.show()
