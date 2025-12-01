@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>8bffb055-ba48-4880-b7ab-7e8b000e178d</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>AR6_PV_Capex.py</StartupFile>
+    <StartupFile>AR6_PV_Capacity.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -21,6 +21,7 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="AR6_PV_Capacity.py" />
     <Compile Include="AR6_PV_Capex.py" />
     <Compile Include="AR6_Solar.py" />
   </ItemGroup>
